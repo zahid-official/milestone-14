@@ -105,3 +105,14 @@ SELECT common_name FROM species
 
 
 
+
+-- problem: 06
+SELECT common_name, sighting_time, name FROM sightings
+    JOIN rangers USING (ranger_id)
+    JOIN species USING (species_id)
+    ORDER BY sighting_time DESC
+    LIMIT 2;
+
+
+
+
