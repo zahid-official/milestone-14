@@ -100,7 +100,7 @@ SELECT name, count(sighting_id) FROM sightings
 -- problem: 05
 SELECT common_name FROM species
     LEFT JOIN sightings USING(species_id)
-    WHERE sightings.species_id is NULL;
+    WHERE sightings.species_id IS NULL;
 
 
 
@@ -152,4 +152,10 @@ SELECT sighting_id, time_of_day(sighting_time) FROM sightings;
 
 
 
-
+-- problem: 09
+DELETE FROM rangers
+    WHERE ranger_id IN (
+        SELECT ranger_id FROM rangers
+        LEFT JOIN sightings USING(ranger_id)
+        WHERE sightings.sighting_id IS NULL
+    );
