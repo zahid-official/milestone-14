@@ -126,3 +126,30 @@ UPDATE species
     
 
 
+-- problem: 08
+CREATE FUNCTION time_of_day(p_sightings_sighting_time TIMESTAMP)
+RETURNS VARCHAR(30)
+LANGUAGE plpgsql
+AS
+$$
+    BEGIN
+        IF EXTRACT(HOUR FROM p_sightings_sighting_time) < 12 THEN
+            RETURN 'Morning';
+
+        ELSIF EXTRACT(HOUR FROM p_sightings_sighting_time) < 17 THEN
+            RETURN 'Afternoon';
+
+        ELSE 
+            RETURN 'Evening';
+
+        END IF;
+    END
+$$;
+
+SELECT sighting_id, time_of_day(sighting_time) FROM sightings;
+
+
+
+
+
+
