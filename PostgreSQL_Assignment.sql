@@ -116,3 +116,13 @@ SELECT common_name, sighting_time, name FROM sightings
 
 
 
+
+-- problem: 07
+UPDATE species
+    SET conservation_status = 'Historic'
+    WHERE EXTRACT (YEAR FROM discovery_date) < 1800;
+
+
+    
+
+
