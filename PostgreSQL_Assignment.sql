@@ -22,8 +22,8 @@ INSERT INTO rangers (name, region) VALUES
 -- species table
 CREATE TABLE species (
     species_id SERIAL PRIMARY KEY,
-    common_name VARCHAR(100) NOT NULL,
-    scientific_name VARCHAR(100) NOT NULL,
+    common_name VARCHAR(100) NOT NULL UNIQUE,
+    scientific_name VARCHAR(100) NOT NULL UNIQUE,
     discovery_date DATE NOT NULL,
     conservation_status VARCHAR(50) NOT NULL
 );
@@ -67,4 +67,11 @@ INSERT INTO sightings (species_id, ranger_id, location, sighting_time, notes) VA
 
 -- problem: 01
 INSERT INTO rangers (name, region) VALUES
-('Derek Fox', 'Coastal Plains')
+('Derek Fox', 'Coastal Plains');
+
+
+
+
+
+-- problem: 02
+SELECT count(DISTINCT species_id) AS unique_species_count FROM sightings;
