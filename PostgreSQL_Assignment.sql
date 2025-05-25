@@ -96,3 +96,12 @@ SELECT name, count(sighting_id) FROM sightings
 
 
 
+
+-- problem: 05
+SELECT common_name FROM species
+    LEFT JOIN sightings USING(species_id)
+    WHERE sightings.species_id is NULL;
+
+
+
+
