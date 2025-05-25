@@ -3,7 +3,7 @@ CREATE DATABASE conservation_db;
 
 
 
-
+-- rangers table
 CREATE TABLE rangers (
     ranger_id SERIAL PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
@@ -17,6 +17,9 @@ INSERT INTO rangers (name, region) VALUES
 
 
 
+
+
+-- species table
 CREATE TABLE species (
     species_id SERIAL PRIMARY KEY,
     common_name VARCHAR(100) NOT NULL,
@@ -33,6 +36,9 @@ INSERT INTO species (common_name, scientific_name, discovery_date, conservation_
 
 
 
+
+
+-- sightings table
 CREATE TABLE sightings (
     sighting_id SERIAL PRIMARY KEY,
     ranger_id INTEGER NOT NULL REFERENCES rangers(ranger_id),
@@ -47,3 +53,18 @@ INSERT INTO sightings (species_id, ranger_id, location, sighting_time, notes) VA
 (2, 2, 'Bankwood Area', '2024-05-12 16:20:00', 'Juvenile seen'),
 (3, 3, 'Bamboo Grove East', '2024-05-15 09:10:00', 'Feeding observed'),
 (1, 2, 'Snowfall Pass', '2024-05-18 18:30:00', NULL);
+
+
+
+
+
+
+
+
+
+
+
+
+-- problem: 01
+INSERT INTO rangers (name, region) VALUES
+('Derek Fox', 'Coastal Plains')
