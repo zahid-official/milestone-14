@@ -9,3 +9,14 @@ CREATE TABLE rangers (
     name VARCHAR(50),
     region VARCHAR(50)
 );
+
+
+
+
+CREATE TABLE species (
+    species_id SERIAL PRIMARY KEY,
+    common_name VARCHAR(50),
+    scientific_name VARCHAR(50),
+    discovery_date DATE,
+    conservation_status VARCHAR(20)
+);
