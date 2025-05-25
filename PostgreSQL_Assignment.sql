@@ -86,3 +86,13 @@ SELECT * FROM sightings
 
 
 
+
+
+-- problem: 04
+SELECT name, count(sighting_id) FROM sightings
+    JOIN rangers USING(ranger_id)
+    GROUP BY NAME;
+
+
+
+
