@@ -27,7 +27,7 @@ PostgreSQL এর জনপ্রিয়তার পেছনে কয়েকট
 
 ---
 
-# 2. Primary Key and Foreign Key concepts
+# 2. Explain the Primary Key and Foreign Key concepts in PostgreSQL.
 
 ## 🔑 PostgreSQL এ Primary Key কী?
 
@@ -66,7 +66,7 @@ PostgreSQL-এ **Foreign Key** হলো একটি কলাম বা কল
 
 ---
 
-# 3. Usages of LIMIT and OFFSET clauses
+# 3. What are the LIMIT and OFFSET clauses used for?
 
 ## 🔢 LIMIT কী?
 
@@ -89,7 +89,7 @@ LIMIT আর OFFSET একসঙ্গে ব্যবহার করে ডে
 
 ---
 
-# 4. Significance of the JOIN Operation
+# 4. What is the significance of the JOIN operation, and how does it work in PostgreSQL?
 
 ## 🔗 PostgreSQL এ Join Clause কী?
 
@@ -129,7 +129,7 @@ PostgreSQL এ JOIN এর মাধ্যমে ডেটাবেজের শ
 
 ---
 
-# 5. GROUP BY clause and its role in aggregation operations
+# 5. Explain the GROUP BY clause and its role in aggregation operations.
 
 ## 🔷 PostgreSQL এ GROUP BY Clause কী?
 
