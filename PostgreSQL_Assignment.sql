@@ -160,10 +160,10 @@ $$
             RETURN 'Evening';
 
         END IF;
-    END
+    END;
 $$;
 
-SELECT sighting_id, time_of_day(sighting_time) FROM sightings;
+SELECT sighting_id, time_of_day(sighting_time) AS time_of_day FROM sightings;
 
 
 
