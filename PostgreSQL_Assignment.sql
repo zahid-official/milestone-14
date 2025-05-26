@@ -106,7 +106,7 @@ SELECT * FROM sightings
 
 
 -- problem: 04
-SELECT name, count(sighting_id) FROM sightings
+SELECT name, count(sighting_id) AS total_sightings FROM sightings
     JOIN rangers USING(ranger_id)
     GROUP BY NAME;
 
